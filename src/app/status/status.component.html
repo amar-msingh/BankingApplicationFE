@@ -1,0 +1,9 @@
+<div align="right" style="background-color: blue; padding-top: 3%; padding-right: 5%;">
+    <button  type="submit"  class="btn btn-dark" [routerLink]="['']">Go To Home Page</button>
+</div>
+<div align="center" style="padding-top: 10%">
+    <p style="font-size: x-large;">Check Account Status</p>
+    <p><input type="text" name="mobno" [(ngModel)]="mobno" placeholder="Enter your mobile number"></p>
+    <button type="button" class="btn btn-primary btn-sm" (click)="clicked()">Submit</button><br><br>
+    <p style="color: green;">{{str}}</p>
+</div>

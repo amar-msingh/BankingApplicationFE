@@ -1,0 +1,152 @@
+
+    <button type="submit" class="btn btn-success" [routerLink]="['/logindashboard']">Go To Dashboard</button>
+
+
+<div class="customerform">
+    <form #customerForm="ngForm" class="myform" (ngSubmit)=updateCustomer(customerForm) novalidate>
+        <table>
+                <tr><td><label for="title">Title <sup><i class="bi bi-asterisk"></i></sup></label> </td>
+                    <td>
+                        <select name="title" [(ngModel)]="customer.title" required>
+                            <option  *ngFor="let title of titles" value=" {{title}}">
+                                {{title}}
+                            </option>
+                        </select>
+                    </td>
+                    </tr>
+    
+                    <tr>
+                    <td><label for="firstName"> First Name <sup><i class="bi bi-asterisk"></i></sup> </label> </td> 
+                    <td><input type="text" name="firstName" required [(ngModel)]="customer.firstName"></td>
+                    
+    
+                    <td><label for="middleName"> Middle Name </label> </td>
+                    <td><input type="text" name="middleName"  [(ngModel)]="customer.middleName"></td>
+    
+                    <td><label for="lastName"> Last Name <sup><i class="bi bi-asterisk"></i></sup></label> </td>
+                    <td><input type="text" name="lastName" required [(ngModel)]="customer.lastName"></td>
+      
+    
+                </tr>
+    
+                <tr>
+                    <td><label for="fatherName">Father's Name <sup><i class="bi bi-asterisk"></i></sup></label> </td>
+                    <td><input type="text" name="fatherName" required [(ngModel)]="customer.fatherName"></td>  
+                </tr>
+    
+                <tr>
+                    <td><label for="mobileNum">Enter Your Mobile Number <sup><i class="bi bi-asterisk"></i></sup></label> </td>
+                    <td><input type="text" name="mobileNum" required [(ngModel)]="customer.mobileNum"></td>
+    
+                    <td><label for="emailID">Email ID</label><sup><i class="bi bi-asterisk"></i></sup> </td>
+                    <td><input type="email" name="emailID" required [(ngModel)]="customer.emailID"></td>
+    
+                    <td><label for="aadharNum">UID</label><sup><i class="bi bi-asterisk"></i></sup></td>
+                    <td><input placeholder="Enter Aadhar Number" type="text" name="aadharNum" required [(ngModel)]="customer.aadharNum"></td>
+    
+                </tr>
+    
+    
+                <tr>
+    
+                    <td>
+                        <label for="dob">Select your Date of Birth <sup><i class="bi bi-asterisk"></i></sup></label>
+                    </td>
+                    <td>
+                        <input  type="date" name="dob" required [(ngModel)]="customer.dob">
+                    </td>
+    
+                </tr>
+    
+    
+                <tr>
+                    <td><label for="rAddrLine1">Address Line 1 <sup><i class="bi bi-asterisk"></i></sup></label> </td>
+                    <td><input type="text" name="rAddrLine1" required [(ngModel)]="customer.rAddrLine1"></td>
+    
+                    <td><label for="rAddrLine2">Address Line 2</label> </td>
+                    <td><input type="text" name="rAddrLine2"  [(ngModel)]="customer.rAddrLine2"></td>
+    
+                    <td><label for="rLandmark">Landmark</label> </td>
+                    <td><input type="text" name="rLandmark" required [(ngModel)]="customer.rLandmark"></td>
+    
+                </tr>
+    
+                <tr>
+                    <td><label for="rCity">City Name <sup><i class="bi bi-asterisk"></i></sup></label> </td>
+                    <td><input type="text" name="rCity" required [(ngModel)]="customer.rCity"></td>
+    
+                    <td><label for="rState">State <sup><i class="bi bi-asterisk"></i></sup></label> </td>
+                    <td><input type="text" name="rState"  [(ngModel)]="customer.rState"></td>
+    
+                    <td><label for="rPinCode">PinCode <sup><i class="bi bi-asterisk"></i></sup></label> </td>
+                    <td><input type="text" name="rPincode" required [(ngModel)]="customer.rPincode"></td>
+    
+                </tr>
+    
+                <tr>
+                    <td><label for="mAddrLine1">Address Line 1 <sup><i class="bi bi-asterisk"></i></sup></label> </td>
+                    <td><input type="text" name="mAddrLine1" required [(ngModel)]="customer.mAddrLine1"></td>
+    
+                    <td><label for="mAddrLine2">Address Line 2</label> </td>
+                    <td><input type="text" name="mAddrLine2"  [(ngModel)]="customer.mAddrLine2"></td>
+    
+                    <td><label for="mLandmark">Landmark</label> </td>
+                    <td><input type="text" name="mLandmark" required [(ngModel)]="customer.mLandmark"></td>
+    
+                </tr>
+    
+                <tr>
+                    <td><label for="mCity">City Name <sup><i class="bi bi-asterisk"></i></sup></label> </td>
+                    <td><input type="text" name="mCity" required [(ngModel)]="customer.mCity"></td>
+    
+                    <td><label for="mState">State <sup><i class="bi bi-asterisk"></i></sup></label> </td>
+                    <td><input type="text" name="mState"  [(ngModel)]="customer.mState"></td>
+    
+                    <td><label for="mPinCode">PinCode <sup><i class="bi bi-asterisk"></i></sup></label> </td>
+                    <td><input type="text" name="mPincode" required [(ngModel)]="customer.mPincode"></td>
+    
+                </tr>
+    
+    
+                <tr>
+                    <td>
+                        <label for="occType">Occupation <sup><i class="bi bi-asterisk"></i></sup></label>
+                    </td>
+                    <td><input type="text" name="occType" required [(ngModel)]="customer.occType"></td>
+    
+    
+                    <td>
+                        <label for="sourceOfIncome">Source Of Income <sup><i class="bi bi-asterisk"></i></sup></label>
+                    </td>
+                    <td><input type="text" name="sourceOfIncome" required [(ngModel)]="customer.sourceOfIncome"></td>
+    
+                    
+                    <td>
+                        <label for="grossAnnualIncome">Annual Income <sup><i class="bi bi-asterisk"></i></sup></label>
+                    </td>
+                    <td><input type="number" name="grossAnnualIncome" required [(ngModel)]="customer.grossAnnualIncome"></td>
+                    
+                </tr>
+    
+    
+                <tr>
+                    <td>
+                        <label for="debitCard">Do you want Debit Card? <sup><i class="bi bi-asterisk"></i></sup></label>
+                    </td>
+                    <td>
+                        <select name="debitCard" [(ngModel)]="customer.debitCard" required>
+                            <option  *ngFor="let option of options" value=" {{option}}">
+                                {{option}}
+                            </option>
+                        </select>
+                    </td>
+                </tr>
+    
+    
+               <tr>
+                <td> </td>
+                <td><button type="submit" class="btn btn-primary" [disabled]="!customerForm.valid" >Update Details</button></td>
+          </tr>
+        </table>
+    </form>
+    </div>

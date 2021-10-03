@@ -1,0 +1,47 @@
+<div align="right" style="background-color: blue; padding-top: 3%; padding-right: 5%; padding-bottom: 0%;">
+    <button type="submit" class="btn btn-dark" [routerLink]="['']">LOGOUT</button>
+</div>
+<h2 align="center" style="padding-top: 2%; padding-bottom: 2%; font-family: 'Times New Roman', Times, serif;font-weight: 600;background-color: bisque;">DASHBOARD</h2>
+<h3 align="center" style="color: blue; padding-top: 2%;">Welcome User</h3>
+<div style="padding-left: 20%; padding-right: 5%;">
+    <table align="right" class="table table-bordered">
+        <thead align="center" style="background-color: lightblue; ">
+            <td style="align-items: center; width: 15%; padding-top: 1%;padding-bottom: 1%;">
+                <a [routerLink]="['/getTransaction']" style="color: black; text-decoration: none; ">Account Summary</a>
+            </td>
+            <td style="align-items: center; width: 15%; padding-top: 1%;padding-bottom: 1%; ">
+                <a [routerLink]="['/addPayee']" style="color: black; text-decoration: none; ">Add Payee</a>
+            </td>
+            <td style="align-items: center; width: 15%; padding-top: 1%;padding-bottom: 1%; ">
+                <a [routerLink]="['/userdetails']" style="color: black; text-decoration: none; ">User Profile</a>
+            </td>
+            <td style="align-items: center; width: 15%; padding-top: 1%;padding-bottom: 1%; ">
+                <a [routerLink]="['/changepassword']" style="color: black; text-decoration: none; ">Change Password</a>
+            </td>
+        </thead>
+    </table>
+</div>
+<div align="center" style="padding-left: 2%;padding-right: 80%; padding-bottom: 2%;">
+    <div style="background-color: lightblue;">
+        <td align="center">
+            <tr align="center">
+                <a [routerLink]="['/accountdetails']"  style="color: black; text-decoration: none; ">Account Details</a>
+            </tr><br>
+            <tr align="center">
+                <a [routerLink]="['/transfer']" style="color: black; text-decoration: none; ">Funds Transfer</a>
+            </tr><br>
+            <tr align="center">
+                <a [routerLink]="['/TransactionDate']" style="color: black; text-decoration: none; ">Account Statement</a>
+            </tr><br>
+            <tr align="center">
+                <a [routerLink]="['/showAllPayee']" style="color: black; text-decoration: none; ">Show All Payee</a>
+            </tr><br>
+            <tr align="center">
+                <a [routerLink]="['/deposit']" style="color: black; text-decoration: none; ">Deposit</a>
+            </tr>
+        </td>
+    </div>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>

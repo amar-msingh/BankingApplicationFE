@@ -1,0 +1,19 @@
+
+
+.customerform{
+    padding: 5%;
+    background-color: rgb(225, 243, 245);
+}
+
+td{
+    padding-left: 4mm;
+    padding-right: 2mm;
+    padding-bottom: 4mm;
+
+}
+
+i{
+    font-size: 1.5mm;
+    color: red;
+
+}

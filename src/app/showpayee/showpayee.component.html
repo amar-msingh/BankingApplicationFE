@@ -1,0 +1,30 @@
+<div align="right " style="padding-top: 3%; padding-right: 5%; background-color: blue; ">
+    <button  type=" submit "  class="btn btn-dark " [routerLink]="[ '/logindashboard'] ">Go To Home Page</button>
+</div>
+<div style="padding-left: 5%; padding-right: 5%;">
+    <table align="center" class="table table-bordered">
+        <thead align="center" style="color: red;">
+            <th style=" padding-top: 5%; ">
+                <label for="payid">Beneficiary ID</label>
+            </th>
+            <th style="padding-top: 5%; ">
+                <label for="payname">Beneficiary Name</label>
+            </th>
+            <th style="padding-top: 5%; ">
+                <label for="payaccno">Account Number </label>
+            </th>
+            <th style="padding-top: 5%; ">
+                <label for="paynn"> Nick Name </label>
+            </th>
+        </thead>
+        <tbody>
+            
+                <tr  align="center" *ngFor="let v of payeearray"> 
+                <td>{{v.payid}}</td>
+                <td>{{v.payname}}</td>
+                <td>{{v.payaccno}}</td>
+                <td>{{v.paynn}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

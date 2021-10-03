@@ -1,0 +1,84 @@
+<div align="center" style="background-color:white; padding-bottom: 17%;">
+    <div align="right" style="padding-right: 5%;padding-top: 3%; background-color: blue;">
+        <button  type="submit"  class="btn btn-dark" [routerLink]="['']">LOGOUT</button>
+    </div>
+    <h2 style="padding-top: 3%;padding-bottom: 2%;background-color: bisque;" align="center">Welcome to Admin Dashboard</h2>
+    <div style="padding-top: 2%;">
+        <table class="table table-bordered">
+            <thead align=" center " style="background-color: lightblue; ">
+                <th>Account Number</th>
+                <th>Title</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Father's Name</th>
+                <th>Mobile Number</th>
+                <th>Email Id</th>
+                <th>Aadhar Number</th>
+                <th>DOB</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Pincode</th>
+                <th>Occupation</th>
+                <th>Debit Card </th>
+                <th>Approve</th>
+                <th>Disapprove</th>
+            </thead>
+            <tbody align="center"  style="background-color: white">
+               <tr *ngFor="let c of customerArray">
+                <td>
+                    {{c.accNo}}
+                </td>
+                <td>
+                    {{c.title}}
+                </td>
+                <td>
+                    {{c.firstName}}
+                </td>
+                <td>
+                    {{c.middleName}}
+                </td>
+                <td>
+                    {{c.lastName}}
+                </td>
+                <td>
+                    {{c.fatherName}}
+                </td>
+                <td>
+                    {{c.mobileNum}}
+                </td>
+                <td>
+                    {{c.emailID}}
+                </td>
+                <td>
+                    {{c.aadharNum}}
+                </td>
+                <td>
+                    {{c.dob}}
+                </td>
+                <td>
+                    {{c.rAddrLine1}}
+                </td>
+                <td>
+                    {{c.rCity}}
+                </td>
+                <td>
+                    {{c.rPinCode}}
+                </td>
+                <td>
+                    {{c.occType}}
+                </td>
+                <td>
+                    {{c.debitCard}}
+                </td>
+       
+            <td *ngIf="c.isApproved=='0'">
+                <button title="Approve" (click)="approveCust(c.accNo)" class="btn btn-success">Approve</button>
+            </td>
+            <td *ngIf="c.isApproved=='0'">
+                <button title="Disapprove" (click)="disapproveCust(c.accNo)" class="btn btn-danger">Disapprove</button>
+            </td>
+        </tbody>
+        </table>
+    </div>
+</div>

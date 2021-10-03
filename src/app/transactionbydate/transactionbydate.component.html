@@ -1,0 +1,58 @@
+<div align="right" style="padding-right: 5%;padding-top: 3%; background-color: blue;">
+    <button  type="submit"  class="btn btn-dark" [routerLink]="['/logindashboard']">Go To Home Page</button>
+</div><br><br>
+<h4 align="center">Choose The Date Range</h4>
+<br>
+<form #dateForm="ngForm" class="myform" (ngSubmit)=checkDate(dateForm) novalidate>
+    <table align="center">
+        <tr>
+        </tr>
+        <tr>
+            <td>
+                <label for="date1">From</label>
+            </td>
+            <td>
+                <input type="date"  name="date1"  ngModel required>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div style="padding-top: 5%;">
+                    <label for="date2">To </label>
+                </div>
+            </td>
+            <td>
+                <div style="padding-top: 5%;">
+                    <input type="date"  name="date2" ngModel required>
+                </div>
+            </td>
+        </tr>
+    </table><br>
+    <table align="center">
+        <td><button type="Reset" class="btn btn-secondary">Reset</button></td>
+        <td style="padding-left: 2%;"><button type="submit" class="btn btn-success" [disabled]="!dateForm.valid">Submit</button></td>
+    </table>
+</form>
+<br><br>
+<div style="padding-left: 5%; padding-right: 5%;">
+    <table align="center" class="table table-bordered">
+        <thead align="center">
+            <th>Transaction ID</th>
+            <th>Transaction Detail</th>
+            <th>Transaction Type</th>
+            <th>Transaction Amount</th>
+            <th>Balance</th>
+            <th>Trasanction Date</th>
+        </thead>
+        <tbody>
+                <tr align="center" *ngFor="let v of transarray ">
+                    <td>{{v.txId}}</td>
+                    <td>{{v.txDetails}}</td>
+                    <td>{{v.txType}}</td>
+                    <td>{{v.txAmount}}</td>
+                    <td>{{v.txbal}}</td>
+                    <td>{{v.txDate}}</td>
+                </tr>
+            </tbody> 
+    </table>
+</div>

@@ -1,0 +1,21 @@
+<div style="background-color: lightblue; padding-top: 2cm; padding-bottom: 4.3cm;">
+    <div align="right" style="padding-right: 5%;padding-top: 3%;">
+        <button type="submit"  class="btn btn-dark" [routerLink]="['']">Go To Home Page</button>
+    </div>
+    <div style="background-color: beige; padding: 3% 5% 5% 5%;">
+        <table align="center">
+            <tr style="font-size: xx-large;">
+                Enter Your Email
+            </tr><br><br>
+            <tr>
+                <td><input type="text" [(ngModel)]="email" placeholder="Enter your email"></td>
+                <td><button type="button" class="btn btn-primary btn-sm" (click)="clicked()">Submit</button></td>
+            </tr>
+            <br><br>
+            <tr align="center">
+                {{temp}}
+            </tr>
+        </table>
+    </div>
+
+</div>

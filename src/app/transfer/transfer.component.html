@@ -1,0 +1,40 @@
+<div style="background-color: lightblue;padding-bottom: 14%;">
+    <div align="right" style="padding-top: 3%; padding-right: 5%; background-color: blue;">
+        <button  type=" submit "  class="btn btn-dark " [routerLink]="['/logindashboard'] ">Go To Home Page</button>
+    </div>
+    <form style="padding-top: 10%;"  #transferForm="ngForm"  class="myform"  (ngSubmit)=transferdo(transferForm) novalidate>
+        <table align="center">
+
+            <tr>
+                <td><label for="fromaccno">From Account</label></td>
+                <td style="padding-left: 10%;"><input type="text" name="fromaccno" [(ngModel)]="accno"></td>
+            </tr>
+
+            <tr>
+                <td><label for="toaccno">To Account</label></td>
+                <td style="padding-left: 10%;"><input type="text" name="toaccno" ngModel></td>
+            </tr>
+            <tr>
+                <td><label for="amount">Amount</label></td>
+                <td style="padding-left: 10%;"><input type="text" name="amount" ngModel></td>
+            </tr>
+            <tr>
+                <td>Select Mode</td>
+                <td style="padding-left: 10%;">
+                    <select name="txndetails" ngModel>
+                        <option>Select</option>
+                        <option>NEFT</option>
+                        <option>IMPS</option>
+                        <option>RTGS</option>
+                    </select>
+                </td>
+            </tr><br>
+        </table>
+        <table align="center">
+            <tr align="center">
+                <td><button type="Reset" class="btn btn-secondary">Reset</button></td>
+                <td style="padding-left: 2%;"><button type="submit" class="btn btn-success">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+</div>

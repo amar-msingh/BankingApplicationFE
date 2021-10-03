@@ -1,0 +1,27 @@
+<div align="right" style="padding-right: 5%;padding-top: 3%; background-color: blue;">
+    <button  type="submit"  class="btn btn-dark" [routerLink]="['/logindashboard']">Go To Home Page</button>
+</div>
+<h3 align="center" style="padding-top: 5%;">Here is your Account summary with all the transaction</h3>
+<br>
+<div style="padding-left: 5%; padding-right: 5%;">
+    <table align="center" class="table table-bordered">
+        <thead align="center">
+            <th>Transaction ID</th>
+            <th>Transaction Detail</th>
+            <th>Transaction Type</th>
+            <th>Transaction Amount</th>
+            <th>Balance</th>
+            <th>Trasanction Date</th>
+        </thead>
+        <tbody align="center">
+            <tr *ngFor="let v of transarray">
+                <td>{{v.txId}}</td>
+                <td>{{v.txDetails}}</td>
+                <td>{{v.txType}}</td>
+                <td>{{v.txAmount}}</td>
+                <td>{{v.txbal}}</td>
+                <td>{{v.txDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

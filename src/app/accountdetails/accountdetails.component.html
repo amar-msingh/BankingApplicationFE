@@ -1,0 +1,48 @@
+<div align="right" style="padding-top: 3%; padding-right: 5%; background-color: blue;">
+    <button  type=" submit "  class="btn btn-dark " [routerLink]="['/logindashboard'] ">Go To Home Page</button>
+</div>
+<h2 align="center" style="padding-top: 2%; padding-bottom: 2%; background-color: rgb(255, 255, 173);">CUSTOMER DETAILS</h2>
+<br>
+<div align="center" style=" font-size: x-large;">
+    <div style="padding-top: 1%; padding-bottom: 1%;background-color: bisque; width: 40%;">Your Balance is {{account.balance}}</div>
+</div>
+<div align="center">
+    <div style="padding-top: 2%;padding-bottom: 2%; width: 40%; background-color: aliceblue;">
+        <table align="center">
+            <tbody>
+                <tr style="font-weight: bold; ">
+                    <td align="center">Property</td>
+                    <td align="center" style="padding-left: 20%;">Value</td>
+                </tr>
+                <tr>
+                    <td>Account Number </td>
+                    <td style="padding-left: 20%;">{{account.accno}}</td>
+                </tr>
+                <tr>
+                    <td>Customer ID </td>
+                    <td style="padding-left: 20%;">{{account.accid}}</td>
+                </tr>
+                <tr>
+                    <td>First Name </td>
+                    <td style="padding-left: 20%;">{{account.fname}}</td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td style="padding-left: 20%;">{{account.lname}}</td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td style="padding-left: 20%;">{{account.mobnum}}</td>
+                </tr>
+                <tr>
+                    <td>Email ID</td>
+                    <td style="padding-left: 20%;">{{account.email}}</td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td style="padding-left: 20%;">{{account.dob}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

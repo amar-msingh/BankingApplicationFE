@@ -1,0 +1,40 @@
+<div align="center" style="background-color: lightblue; padding-bottom: 13.5%;">
+    <div align="right" style="padding-right: 5%;padding-top: 3%; background-color: blue;">
+        <button  type="submit"  class="btn btn-dark" [routerLink]="['']">Go To Home Page</button>
+    </div>
+    <div align="center" style="padding-top: 5%; padding-bottom: 5%; font-size: x-large;">
+        <div style="background-color: bisque; width: 20%;">{{warning}}</div>
+    </div>
+
+    <form #netregisterForm="ngForm" class="myform" (ngSubmit)=checkregister(netregisterForm) novalidate>
+        <table align="center">
+            <tr>
+                <td>
+                    <label for="accno">Account Number</label>
+                </td>
+                <td>
+                    <input type="text"  name="accno"  ngModel required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pass">Password </label>
+                </td>
+                <td>
+                    <input type="password"  name="pass"  ngModel required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="txnpass"> Transaction Password </label> </td>
+                <td>
+                    <input type="password"  name="txnpass"  ngModel required>
+                </td>
+            </tr>
+        </table><br>
+        <table align="center">
+            <td><button type="Reset" class="btn btn-secondary">Reset</button></td>
+            <td style="padding-left: 2%;"><button type="submit" class="btn btn-success" [disabled]="!netregisterForm.valid">Submit</button></td>
+        </table>
+    </form>
+</div>
