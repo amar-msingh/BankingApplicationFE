@@ -1,9 +1,13 @@
 <div align="right" style="padding-top: 3%; padding-right: 5%; background-color: blue;">
-    <button  type=" submit "  class="btn btn-dark " [routerLink]="[ ''] ">Go To Home Page</button>
+    <button  type=" submit "  class="btn btn-dark " [routerLink]="['/admindashboard'] ">Go To Home Page</button>
 </div>
 <br><br> <br><br>
 <h4 align="center">Enter Deposit Amount</h4><br><br>
 <table align="center" style="padding-top: 5em;">
+    <tr>
+        <td><label for="accno">Enter the Account Number</label></td>
+        <td style="padding-left: 5%;"> <input type="number" name="accno" [(ngModel)]="accno"></td>
+    </tr>
     <tr>
         <td><label for="deposit">Enter the Amount</label></td>
         <td style="padding-left: 5%;"> <input type="number" name="deposit" [(ngModel)]="amount"></td>

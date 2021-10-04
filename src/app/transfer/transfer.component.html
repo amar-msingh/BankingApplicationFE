@@ -2,7 +2,7 @@
     <div align="right" style="padding-top: 3%; padding-right: 5%; background-color: blue;">
         <button  type=" submit "  class="btn btn-dark " [routerLink]="['/logindashboard'] ">Go To Home Page</button>
     </div>
-    <form style="padding-top: 10%;"  #transferForm="ngForm"  class="myform"  (ngSubmit)=transferdo(transferForm) novalidate>
+    <form style="padding-top: 10%;"  #transferForm="ngForm"  class="myform"  (ngSubmit)="transferdo(transferForm)" novalidate>
         <table align="center">
 
             <tr>
@@ -11,9 +11,14 @@
             </tr>
 
             <tr>
-                <td><label for="toaccno">To Account</label></td>
-                <td style="padding-left: 10%;"><input type="text" name="toaccno" ngModel></td>
-            </tr>
+                <td>To</td>
+                <td style="padding-left: 10%;">
+                    <select name="toaccno"  ngModel *ngFor="let p of payeearray">
+                        <option>select</option>
+                        <option value="{{p.payaccno}}">{{p.payname}}</option>
+                    </select>
+                </td>
+            </tr><br>
             <tr>
                 <td><label for="amount">Amount</label></td>
                 <td style="padding-left: 10%;"><input type="text" name="amount" ngModel></td>

@@ -11,9 +11,7 @@ export class DasboardLoginComponent implements OnInit {
   accno:string="";
   constructor(private router:Router) { }
 
-  ngOnInit(): void {
-  
-    console.log(this.accnumber);
+  ngOnInit(): void {   
     
   }
   clicked()

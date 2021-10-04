@@ -10,7 +10,7 @@ import { UserService } from '../user.service';
 })
 export class DepositComponent implements OnInit {
   amount:number=0;
-  accno:any;
+  accno:number=0;
   constructor(private userve:UserService,private router:Router) { }
   
   clicked()
@@ -22,13 +22,17 @@ export class DepositComponent implements OnInit {
 
         alert("Money Added")
         console.log(true);
-        this.router.navigate(["/logindashboard"])
+        this.router.navigate(["/admindashboard"])
+        }
+        else
+        {
+          alert("Account Not Found")
         }
       }
     )
   }
   ngOnInit(): void {
-    this.accno=localStorage.getItem("Accno");
+    
   }
 
 }

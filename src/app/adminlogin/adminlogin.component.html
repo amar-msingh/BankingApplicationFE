@@ -1,4 +1,4 @@
-<div style="background-color: black;">
+<div style="background-color: white;">
     <div align="right" style="padding-right: 5%;padding-top: 3%; background-color: blue;">
         <button  type="submit"  class="btn btn-dark" [routerLink]="['']">Go To Home Page</button>
     </div>
@@ -6,14 +6,14 @@
     <h5 align="center" style="padding-top: 3%;padding-bottom: 5%;color: red;">{{warning}}</h5>
 
     <form #adminLoginForm="ngForm" class="myform" (ngSubmit)=validateLogin(adminLoginForm) novalidate>
-        <table style="color: white; font-weight: 500;" align="center">
+        <table style="color: black; font-weight: 500;" align="center">
             <tr>
                 <td>Login Username</td>
                 <td style="padding-left: 10%;"><input type="number" [(ngModel)]="admin.id" name="id" placeholder="Login Id"></td>
             </tr>
             <tr>
                 <td style="padding-top: 8%;">Login Password</td>
-                <td style="padding-top: 8%; padding-left: 10%;"><input type="password" [(ngModel)]="admin.pass" name="pass" placeholder="Login Password"> </td>
+                <td style="padding-top: 8%; padding-left: 10%;"><input type="password" [(ngModel)]="admin.pass" name="pass" placeholder="Login Password" minlength="4"> </td>
             </tr>
         </table>
         <div style="padding-top: 4%; padding-bottom: 6%;" align=" center "><button type="submit " class="btn btn-primary " [disabled]="!adminLoginForm.valid ">Log In</button></div>

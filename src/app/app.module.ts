@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BackButtonDisableModule } from 'angular-disable-browser-back-button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -55,7 +56,8 @@ import { ErrorComponent } from './error/error.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BackButtonDisableModule.forRoot()
    ],
   providers: [],
   bootstrap: [AppComponent]

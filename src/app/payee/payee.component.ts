@@ -28,7 +28,7 @@ export class PayeeComponent implements OnInit {
         }
         else
         {
-          alert("Not Added")
+          alert(" Payee Not Added , No Customer Account Present")
         }
       }
     )

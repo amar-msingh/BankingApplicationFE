@@ -41,7 +41,7 @@ export class UserService {
       
       return this.myhttp.post(this.baseUrl+"/getTransactiononit/"+accno,date);
     }
-    depositMoney(accno:string,amount:number)
+    depositMoney(accno:number,amount:number)
     {
       return this.myhttp.post(this.baseUrl+"/deposit/"+accno,amount);
     }

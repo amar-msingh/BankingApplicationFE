@@ -24,7 +24,7 @@ export class StatusComponent implements OnInit {
         
       if(this.val==0)
       {
-      this.str="Account Approved"
+      this.str="Your Account has been Approved. Your credentials have been sent to you Email ID."
       }
       if(this.val==1)
       {
